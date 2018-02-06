@@ -52,5 +52,64 @@ angular.module('starter.controllers', [])
   ];
 })
 
+.controller('LoginCtrl', function($scope, $state) {
+  $scope.goLogar = function(){
+    $state.go('app.logar');
+}
+
+  $scope.goGrupos = function(){
+    $state.go('app.grupos');
+  }
+    
+})
+
+.controller('LogarCtrl', function($scope) {
+})
+
+.controller('GruposCtrl', function($scope, $state) {
+  $scope.goChats = function(){
+    $state.go('app.chat');
+}
+})
+
+.controller('ChatCtrl', function($scope) {
+
+})
+
+.controller('AconselhamentotCtrl', function($scope) {
+
+})
+
+.controller('FiquePorDentrotCtrl', function($scope, $state) {
+  $scope.goKhalo = function(){
+    $state.go('app.new-khalo');
+}
+
+  $scope.goBob = function(){
+    $state.go('app.news-bob');
+}
+
+  $scope.goDear = function(){
+    $state.go('app.news-dear');
+}
+
+})
+
+.controller('NewkhaloCtrl', function($scope) {
+
+})
+
+.controller('NewsBobCtrl', function($scope) {
+
+})
+
+.controller('NewsDearCtrl', function($scope) {
+
+})
+
+.controller('SobreNosCtrl', function($scope) {
+
+})
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

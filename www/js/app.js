@@ -32,42 +32,116 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.login', {
+    url: '/login',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/Login.html',
+        controller: 'LoginCtrl'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+  .state('app.logar', {
+    url: '/logar',
+    views:{
+    'menuContent': {
+    templateUrl: 'templates/logar.html',
+    controller: 'LogarCtrl'
       }
     }
-  });
+  })
+
+  .state('app.grupos', {
+    url: '/grupos',
+    views:{
+    'menuContent': {
+    templateUrl: 'templates/grupos.html',
+    controller: 'GruposCtrl'
+      }
+    }
+  })
+
+  .state('app.chat', {
+    url: '/chat',
+    views:{
+    'menuContent': {
+    templateUrl: 'templates/chat.html',
+    controller: 'ChatCtrl'
+      }
+    }
+  })
+
+  .state('app.aconselhamento', {
+    url: '/aconselhamento',
+    views:{
+    'menuContent': {
+    templateUrl: 'templates/aconselhamento.html',
+    controller: 'AconselhamentotCtrl'
+      }
+    }
+  })
+
+  .state('app.fique-por-dentro', {
+    url: '/fique-por-dentro',
+    views:{
+    'menuContent': {
+    templateUrl: 'templates/fique-por-dentro.html',
+    controller: 'FiquePorDentrotCtrl'
+      }
+    }
+  })
+
+  .state('app.new-khalo', {
+    url: '/new-khalo',
+    views:{
+    'menuContent': {
+    templateUrl: 'templates/new-khalo.html',
+    controller: 'NewkhaloCtrl'
+      }
+    }
+  })
+
+  .state('app.news-bob', {
+    url: '/news-bob',
+    views:{
+    'menuContent': {
+    templateUrl: 'templates/news-bob.html',
+    controller: 'NewsBobCtrl'
+      }
+    }
+  })
+
+  .state('app.news-dear', {
+    url: '/news-dear',
+    views:{
+    'menuContent': {
+    templateUrl: 'templates/news-dear.html',
+    controller: 'NewsDearCtrl'
+      }
+    }
+  })
+
+  .state('app.sobre-nos', {
+    url: '/sobre-nos',
+    views:{
+    'menuContent': {
+    templateUrl: 'templates/sobre-nos.html',
+    controller: 'SobreNosCtrl'
+      }
+    }
+  })
+
+  //login que veio com o ionic NÂO DESCOMENTAR//
+  // .state('app.login', {
+  //   url: '/login',
+  //   views: {
+  //     'menuContent': {
+  //       templateUrl: 'templates/login.html'
+  //     }
+  //   }
+  // });
+    
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/login');
 });
